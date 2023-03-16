@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41/"
+     xml:base="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-20="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41">
+        <owl:imports rdf:resource="file:/C:/Users/SHUBHAM%20SAINI/Desktop/movie.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#hasActor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#hasDirected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#hasDirected">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isDirectedby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isDirectedby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isDirectedby">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isWrittenby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isWrittenby"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#isDirectedby"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Director"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Program -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Program">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Theater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Theater"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Action -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Actor -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Adventure -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Animation -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Animation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Biography -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Biography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Comedy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Crime -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Director -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Drama -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Family -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Family">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Fantasy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#History -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#History">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Horror -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Music -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Music">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Mystery -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Mystery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Romance -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Sci-Fi -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Sci-Fi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Sport -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Sport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Thriller -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Thriller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#War -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#War">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Movie"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Writer -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tai/ontologies/2023/2/untitled-ontology-20#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shubhamsaini/ontologies/2023/2/untitled-ontology-41#Person"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
