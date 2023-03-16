@@ -2,6 +2,9 @@
 
 File Explanation. 
 
+## Ontolog fin
+The final ontology after comminting all the changes in the file
+
 ## PYTHON FILE
 The only python file in this 'repo' is to extract the CSV information from API and convert the CSV file into RDF, 
 so it can be easily imported in the protege for further use. 
