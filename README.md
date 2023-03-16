@@ -2,8 +2,8 @@
 
 File Explanation. 
 
-## Ontolog fin
-The final ontology after comminting all the changes in the file
+## The main
+The final ontology after completing part 1 and Part 2. 
 
 ## PYTHON FILE
 The only python file in this 'repo' is to extract the CSV information from API and convert the CSV file into RDF, 
