@@ -1,6 +1,6 @@
 # WebDatamining_Manisha-Shubham-Final_Project
 
-File Explanation. 
+File Explanations
 
 ## The main
 The final ontology after completing part 1 and Part 2. 
