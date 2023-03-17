@@ -1,0 +1,124 @@
+#Common to all the queries 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+
+1) 
+
+SELECT ?actor
+WHERE {
+  ?actor rdf:type :Actor.
+}
+
+
+2) SELECT ?movie ?director
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasGenre "Thriller".
+  ?movie :hasDirector ?director.
+}
+
+
+
+3) SELECT ?movieName
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasGenre "Crime Thriller".
+  ?movie :hasTitle ?movieName.
+}
+
+
+4) SELECT ?actorName
+WHERE {
+  ?actor rdf:type :Actor.
+  ?actor :hasName ?actorName.
+  ?actor :hasAge ?age.
+  FILTER (?age > 51)
+}
+
+
+
+5) # SELECT ?movieTitle ?theaterLocation ?scheduleEndTime
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasTitle ?movieTitle.
+  ?theater rdf:type :Theater.
+  ?theater :hasLocation ?theaterLocation.
+  ?schedule rdf:type :Schedule.
+  ?schedule :playsMovie ?movie.
+  ?schedule :scheduledForDate "2023-03-17"^^xsd:date.
+  ?schedule :hasEndTime ?scheduleEndTime.
+  ?theater :hasSchedule ?schedule.
+} 
+
+####################################################
+####################################################
+
+
+1) 
+
+SELECT ?movieTitle ?actorName ?directorName ?writerName
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasTitle ?movieTitle.
+  
+  OPTIONAL {
+    ?movie :hasActor ?actor.
+    ?actor :hasName ?actorName.
+  }
+  
+  OPTIONAL {
+    ?movie :hasDirector ?director.
+    ?director :hasName ?directorName.
+  }
+  
+  OPTIONAL {
+    ?movie :hasWriter ?writer.
+    ?writer :hasName ?writerName.
+  }
+}
+
+
+2)
+
+
+SELECT ?movieTitle ?year
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasTitle ?movieTitle.
+  ?movie :hasYear ?year.
+  
+  {
+    ?movie :hasGenre ?genre.
+    FILTER(?genre = :Thriller || ?genre = :Action)
+  }
+  
+  {
+    ?movie :hasCountry ?country.
+    ?country :hasLanguage ?language.
+    FILTER(?language = "English" && ?country = :USA)
+  }
+}
+
+
+
+
+3) 
+CONSTRUCT {
+  ?movie :hasTitle ?movieTitle.
+  ?movie :hasYear ?year.
+  ?movie :hasDirector ?director.
+}
+WHERE {
+  ?movie rdf:type :Movie.
+  ?movie :hasTitle ?movieTitle.
+  ?movie :hasYear ?year.
+  ?movie :hasDirector ?director.
+  FILTER(?year >= 2010)
+}
+
+
+4) 
+
