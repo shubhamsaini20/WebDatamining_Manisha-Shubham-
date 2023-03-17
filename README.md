@@ -15,3 +15,6 @@ The Screenshot folder here keeps the png format of all the important steps taken
 ## .CSV and RDF file 
 .CSV is the file we used in our python code to convert into RDF file and the movies file in RDF format is the our final result, 
 ny running python script
+
+##SPARQL 
+The text file has the SPARQL code written in it. 
